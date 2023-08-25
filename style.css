@@ -57,6 +57,7 @@
 }
 .navlinks a:hover{
     border: 1px solid var(--primary-color);
+    transition: .4s;
 }
 .navlinks > .active{
     border: 1px solid var(--primary-color);
@@ -88,6 +89,10 @@
 .search a{
     color: var(--secondary-color);
     padding: 10px;
+}
+.login:hover , .login i a:hover, .search a:hover{
+    color: var(--primary-color);
+    transition: .5s;
 }
 #menu{
     display: none;
@@ -186,7 +191,11 @@ main{
 .home-right img{
     width: 280pt;
 }
-
+.btn .contact-btn:hover{
+    background-color:var(--primary-color) ;
+    color: var(--secondary-color);
+    transition: .5s;
+}
 @keyframes slide {
     0%{margin-left: 0%;}
     35%{margin-left: 0%;}
@@ -392,6 +401,11 @@ main{
 .item a i:hover{
     background-color: var(--color2);
 }
+.serv-item a i:hover{
+    background-color: var(--color2);
+    transition: .3s;
+}
+
 
 /* ------------------------------------------ */
 /* --------------CASE------------------ */
@@ -605,6 +619,7 @@ main{
     justify-content: center;
 }
 .newscontents{
+    overflow: hidden;
     width: 800pt;
     text-align: center;
     display: flex;
@@ -635,7 +650,17 @@ main{
     border-radius: 50%;
     margin-top: -46px;
 }
-
+.newsimg{
+    width: 100%;
+    display: flex;
+    animation: news-slide 5s infinite ease-in-out;
+}
+@keyframes news-slide {
+    0%{margin-left: 0;}
+    38%{margin-left: 0;}
+    50%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
 /* ------------------------------------------ */
 /* -----------------CONSULT---------------- */
 /* ------------------------------------------ */
@@ -733,10 +758,14 @@ main{
 .contacts i:hover{
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    transition: .3s;
+    transition: 1s;
 }
 .icons i:hover{
     color: rgb(33, 166, 255);
+    transition: 1s;
+}
+.copyright span:hover{
+    color: var(--color2);
     transition: .5s;
 }
 
